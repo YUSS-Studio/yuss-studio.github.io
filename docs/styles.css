@@ -20,6 +20,8 @@ header, footer {
     justify-content: space-between;
 
     font-size: 1rem;
+
+    color: #929292;
 }
 
 header > div, footer > div {
