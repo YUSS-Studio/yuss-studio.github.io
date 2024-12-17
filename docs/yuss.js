@@ -7,11 +7,11 @@ var projects = [
         name: "Progress Summit",
         link: "./progress-summit",
         type: "Conference Visual Identity",
-        description: ""
+        description: "The Atlantic’s Progress Summit is an event that brings together scientists, entrepreneurs, and storytellers to discuss science, technology, and curiosity. The summit aims to highlight innovative ideas and discuss how to use technology to create a better world."
     },
     {
-        name: "AMC Theaters",
-        link: "./amc-theaters",
+        name: "AMC Theatres",
+        link: "./amc-theatres",
         type: "Entertainment Visual Identity",
         description: ""
     },
@@ -28,7 +28,7 @@ var projects = [
         description: ""
     },
     {
-        name: "In: Situ",
+        name: "In Situ:",
         link: "./in-situ",
         type: "Exhibition Catalog",
         description: ""
@@ -38,16 +38,26 @@ var projects = [
 // TODO: override on each page
 var imgs = [];
 
-
 function buildProjectThumb(project) {
     var element = document.createElement('div');
     element.classList.add('project-thumb');
 
     var thumb = `<a href="${project.link}">`;
-    thumb += '<div class="thumb-img-placeholder"></div>';
+    thumb += '<div class="YUSS-grid-2">';
+    
+    
+    // Col 1
+    thumb += '<div>';
     thumb += `<h3>${project.name}</h3>`;
     thumb += `<p>${project.type}</p>`;
-    thumb += '</a>';
+    thumb += `<br><p>${project.description}</p>`;
+    thumb += '</div>';
+
+    // Col 3
+    thumb += '<div class="thumb-img-placeholder"></div>';
+
+    thumb += "</div>";
+    thumb += '</a><br>';
 
     element.innerHTML = thumb;
     document.getElementById(targetDiv).appendChild(element);

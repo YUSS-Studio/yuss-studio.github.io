@@ -30,11 +30,6 @@ footer {
     padding-bottom: 2rem;
 }
 
-.YUSS-grid-5 {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 0.5rem;
-}
 .YUSS-grid-1 {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -44,12 +39,24 @@ footer {
 .YUSS-grid-2 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 4rem;
+    gap: 2rem;
+}
+
+.YUSS-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
 }
 
 .YUSS-grid-4 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.YUSS-grid-5 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     gap: 0.5rem;
 }
 
@@ -80,4 +87,18 @@ p {
     line-height: 1.4;
 }
 
+p.bigtype {
+    font-size: 2rem;
+}
+
 /* TODO: test on mobile; tighter margins */
+
+@media only screen and (max-width: 768px) {
+    body {
+        margin: 1rem;
+    }
+
+    .YUSS-grid-1, .YUSS-grid-2, .YUSS-grid-3, .YUSS-grid-4, .YUSS-grid-5 {
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+}

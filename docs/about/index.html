@@ -15,29 +15,21 @@
     <body>
         <br>
         <h2>About YUSS</h2>
-        <!-- TODO: wrap to 1 column on mobile -->
         <div class="YUSS-grid-2">
             <div>
                 <p>YUSS is a collective of designers who met during their Graphic Design MFA program at ArtCenter College of Design in Pasadena, California. We have worked together for almost three years since moving to Los Angeles and have gained a deep understanding of the city. We believe this perspective makes our team uniquely qualified to design the identity for the 2025 AIGA National Conference. Thank you for considering our portfolio submission.</p>
                 <p style="margin-bottom:0.25rem;"><strong>Capabilities</strong></p>
                 <p>brand identity, packaging, publication, wayfinding, type design, art direction, 2D/3D motion graphics, copywriting, interactive installations, digital design, creative coding, software development</p>
+                <br>
+                <p>We’d love to discuss your project, please reach out at <a href="yuss@applieddesigner.com" target="_blank"><strong>yuss@applieddesigner.com</strong></a>.</p>
             </div>
             <!-- TODO: update photo + make it scale proportionally-->
-            <img src="./YUSS_team_photo.png"></img>
+            <img src="./YUSS_team_photo.png" style="max-width: 100%;"></img>
         </div>
-        <div class="YUSS-grid-4">
-            <div class="bio">
-                <h3>Yitong Jiang</h3>
-            </div>
-            <div class="bio">
-                <h3>Umang Ahluwalia</h3>
-            </div>
-            <div class="bio">
-                <h3>Sisi Chen</h3>
-            </div>
-            <div class="bio">
-                <h3>Shakeel Mohamed</h3>
-            </div>
+        <br>
+        <hr>
+        <h2>Team Bios</h2>
+        <div id="bios" class="YUSS-grid-4">
         </div>
         <br>
     </body>
@@ -49,5 +41,49 @@
     </footer>
     <script src="../yuss.js"></script>
     <script type="text/javascript">
+        var team = [
+            {
+                name: "Yitong Jiang",
+                linkedin: "https://www.linkedin.com/in/yitong-jiang-design/",
+                bio: "Chinese New Year was the first visual system I encountered—a world of vibrant red where paper-cuts, firecrackers, and lanterns intertwine to create the “spirit of the New Year.” Similar systems, like Christmas, use unique visual languages to bring love and hope across time and borders. This is why I’m captivated by visual design—it’s a powerful vessel for sparking dialogue, touching hearts, and shaping generations. As a designer, I hope to fill this vessel with my own stories, weaving them into a collective meaning."
+            },
+            {
+                name: "Umang Ahluwalia",
+                linkedin: "https://www.linkedin.com/in/umangahluwalia",
+                bio: "I’m a graphic designer driven by the interplay of systems, typography, and spaces. I’m fascinated by the concept of infinity. Endless possibilities in a world constrained by limits. Embracing this idea allows me to push beyond the obvious, finding where infinite possibilities meet finite solutions. Design is my way of navigating these infinite possibilities, testing ideas until the best solution makes itself apparent."
+            },
+            {
+                name: "Sisi Chen",
+                linkedin: "https://www.linkedin.com/in/sisi-chen-594938119/",
+                bio: "Overlapping blurs boundaries, revealing hidden connections—Chinese and English, baibai and praying, family unity and individualism. These influences inform my graphic design practice. Through both physical and digital mediums, I blend layers of texture, form, and function. There’s an intimate connection with the human touch that adds another layer of meaning. For me, it’s about blending these layers together to create experiences, where each interaction adds depth to the story."
+            },
+            {
+                name: "Shakeel Mohamed",
+                linkedin: "https://www.linkedin.com/in/shakeelmohamed/",
+                bio: "I think inside, outside, and about the box itself. I thrive at the intersection of cultures, translating across perspectives to discover new ideas. Attention to typography is at the heart of my practice as a designer. My creative process is a synthesis of research, conversational insights, strategy, and empathy to connect with my audience. I’ve been involved with AIGA for four years including the 2022 Portfolio Festival, volunteering at the 2022 National Design Conference in Seattle, and speaking at Graphic Content 2024 hosted by AIGA Los Angeles."
+            }
+        ];
+
+        function addBio(member) {
+            var element = document.createElement('div');
+            element.classList.add('bio');
+
+            var thumb = "";
+            thumb += `<h3>${member.name}</h3>`;
+            thumb += `<p><a href="${member.linkedin}" target=_blank style="color: #929292;">LinkedIn Profile</a></p>`;
+            thumb += `<p>${member.bio}</p>`;
+
+            element.innerHTML = thumb;
+            return element;
+        }
+
+        function addBios() {
+            for (var b = 0; b < team.length; b++) {
+                var bio = addBio(team[b]);
+                document.getElementById("bios").appendChild(bio);
+            }
+        }
+
+        addBios();
     </script>
 </html>
