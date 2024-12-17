@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "npx @11ty/eleventy --input=src --output=test",
-    "start": "npx @11ty/eleventy --serve --input=src --output=test"
+    "build": "npx @11ty/eleventy --input=src --output=docs",
+    "start": "npx @11ty/eleventy --serve --input=src --output=docs"
   },
   "author": "",
   "license": "ISC",
