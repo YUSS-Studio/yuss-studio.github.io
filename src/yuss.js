@@ -21,13 +21,15 @@ var projects = [
         name: "List Arts Center",
         link: "./list-arts-center",
         type: "Cultural Visual Identity",
-        description: "List Arts Center is the contemporary art museum on campus at MIT. This project looks at the semantic value of the name/word “List” to create new organizational methodologies that reflect the Center's commitment to the circulation of knowledge."
+        description: "List Arts Center is the contemporary art museum on campus at MIT. This project looks at the semantic value of the name/word “List” to create new organizational methodologies that reflect the Center's commitment to the circulation of knowledge.",
+        cover: "./list-arts-center/img/LIST.gif"
     },
     {
         name: "Midjourney",
         link: "./midjourney",
         type: "Technology Visual Identity",
-        description: "Midjourney’s visual language alienates non-technical audiences. This hypothetical rebrand makes the brand more approachable from the logotype to envisioning a new conference—Midjourney Navigate."
+        description: "Midjourney’s visual language alienates non-technical audiences. This hypothetical rebrand makes the brand more approachable from the logotype to envisioning a new conference—Midjourney Navigate.",
+        cover: "./midjourney/img/midjourney.001.png"
     }
 ];
 
