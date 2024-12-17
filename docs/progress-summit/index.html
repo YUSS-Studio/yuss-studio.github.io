@@ -1,11 +1,12 @@
+
 <!DOCTYPE html>
 <html class="wf-initial-load">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Progress Studio | YUSS Studio</title>
+        <title>Progress Summit | YUSS Studio</title>
         <meta name="robots" content="noindex">
-        <link rel="stylesheet" href="../styles.css">
+        <link rel="stylesheet" href="/styles.css">
     </head>
     <header>
         <div><a href="../">YUSS Studio</a></div>
@@ -15,12 +16,24 @@
     <body>
         <br>
         <h2>Progress Summit</h2>
-        <div class="YUSS-grid-2">
-            <p>Progress Summit Description</p>
-            <p>Media types</p>
+        <div class="YUSS-grid-6">
+            <div style="grid-column: span 2;">
+                <p>
+                    <strong>Conference Visual Identity</strong>
+                    <br>
+                    The Atlantic’s Progress Summit is an event that brings together scientists, entrepreneurs, and storytellers to discuss science, technology, and curiosity. The summit aims to highlight innovative ideas and discuss how to use technology to create a better world.
+                </p>
+            </div>
+            <div style="grid-column: span 1;"></div>
+            <div style="grid-column: span 2;">
+                <p>
+                    <strong>Tools</strong><br>
+                    InDesign, Illustrator, Photoshop, Midjourney, After Effects, Figma
+                </p>
+            </div>
         </div>
         <br>
-        <div class="YUSS-grid-1" id="project-thumbs-1">
+        <div id="project-content">
         </div>
     </body>
     <hr>
@@ -29,9 +42,38 @@
         <div>2024 &copy; YUSS Studio.</div>
         <div><a href="mailto:yuss@applieddesigner.com">yuss@applieddesigner.com</a></div>
     </footer>
-    <script src="../yuss.js"></script>
-    <script type="text/javascript">
-        imgs = [{}, {}, {}, {}, {}];
-        buildAllImgs();
-    </script>
+    <script src="/yuss.js"></script>
+    
+<script type="text/javascript">
+    imgs = [
+        {
+            img: "./img/progress_summit.003.png",
+            caption: "Conference main stage"
+        },
+        {
+            img: "./img/progress_summit.001.png",
+            caption: "Out of home promotion"
+        },
+        {
+            img: "./img/progress_summit.002.png",
+            caption: "Exterior environment design of the venue"
+        },
+        {
+            img: "./img/progress_summit.004.png",
+            caption: "Modular typeface"
+        },
+        {
+            img: "./img/progress_summit.005.png",
+            caption: "Conference collateral"
+        },
+        {
+            img: "./img/progress_summit.006.png",
+            caption: "Conference stationery"
+        }
+    ];
+    var audience = "The conference’s main participants are scientists, entrepreneurs, and storytellers. However, the current visual system feels subdued, lacking energy and systematic visual design.";
+    var solution = "While honoring the brand’s academic heritage, I aim to energize the visuals to reflect the summit’s dynamic discussions. Highlighting Academic, Pioneering, and Humanity, the design conveys a passion for progress. Rooted in the spirit of Expanding & Spreading Knowledge, it fosters collaboration among researchers, professionals, and investors, inspiring shared visions for the future.";
+
+    buildAllImgs(audience, solution);
+</script>
 </html>

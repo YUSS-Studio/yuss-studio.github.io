@@ -62,17 +62,38 @@ footer {
     gap: 0.5rem;
 }
 
+/* TODO: build col-span classes... */
+.YUSS-grid-6 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2rem;
+}
+
+.project-thumb-row {
+    margin-bottom: 2rem;
+}
+
 .project-thumb {
-    margin-bottom: 1rem;
+    grid-column: span 5;
+    margin-bottom: 2rem;
+}
+
+.project-caption {
+    grid-column: span 1;
 }
 
 .thumb-img-placeholder {
     background-color: black; aspect-ratio: 16/9; min-width: 20%;
 }
 
+.img-full-w {
+    max-width: 100%;
+}
+
 .img-caption {
     color: gray;
 }
+
 
 a {
     text-decoration: none !important;
@@ -95,12 +116,20 @@ p.bigtype {
 
 /* TODO: test on mobile; tighter margins */
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 860px) {
     body {
         margin: 1rem;
     }
 
-    .YUSS-grid-1, .YUSS-grid-2, .YUSS-grid-3, .YUSS-grid-4, .YUSS-grid-5 {
+    .YUSS-grid-1, .YUSS-grid-2, .YUSS-grid-3, .YUSS-grid-4, .YUSS-grid-5, .YUSS-grid-6 {
         grid-template-columns: repeat(1, 1fr) !important;
+        gap: 0.25rem;
+    }
+
+    .project-thumb, .project-caption {
+        grid-column: 1;
+    }
+    .project-thumb {
+        .margin-bottom: 0.5rem;     
     }
 }
