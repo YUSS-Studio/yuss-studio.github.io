@@ -69,8 +69,14 @@ function buildProjectImg(project) {
 
     var thumb = "";
     // TODO: img/video src logic
-    thumb += '<div class="thumb-img-placeholder"></div>';
-    thumb += `<p class="img-caption">${project.type}</p>`;
+    if (project.img) {
+        thumb += `<img src="${project.img}" class="img-full-w"></div>`;
+    } else if (project.video) {
+        thumb += '<div class="thumb-img-placeholder"></div>';
+    } else {
+        thumb += '<div class="thumb-img-placeholder"></div>';
+    }
+    thumb += `<p class="img-caption">${project.caption}</p>`;
 
     element.innerHTML = thumb;
     document.getElementById(targetDiv).appendChild(element);
