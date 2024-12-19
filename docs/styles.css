@@ -70,12 +70,17 @@ footer {
 }
 
 .project-thumb-row {
-    margin-bottom: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .project-thumb {
-    grid-column: span 5;
+/*     grid-column: span 5; */
     margin-bottom: 2rem;
+}
+
+.gc-span-5 {
+    grid-column: span 5;
 }
 
 .project-caption {
@@ -98,6 +103,11 @@ footer {
 a {
     text-decoration: none !important;
     color: inherit;
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
 }
 
 h3 {
@@ -129,7 +139,21 @@ p.bigtype {
     .project-thumb, .project-caption {
         grid-column: 1;
     }
-    .project-thumb {
-        .margin-bottom: 0.5rem;     
+
+    .project-thumb, .project-thumb-row {
+        margin-bottom: 0rem;
+    }
+
+    .project-thumb .gc-span-5 {
+        margin-bottom: 0 !important;
+    }
+
+   /*  .bottom-border {
+        padding-bottom: 2rem;
+        border-bottom: 1px solid black;
+    } */
+
+    h2 {
+        margin-bottom: 0.25rem;
     }
 }

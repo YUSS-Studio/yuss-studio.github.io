@@ -1,7 +1,3 @@
-// var targetDiv = "project-thumbs-5";
-var targetDiv = "project-thumbs-1";
-
-
 var projects = [
     {
         name: "Progress Summit",
@@ -39,8 +35,10 @@ var imgs = [];
 function buildProjectThumb(project) {
     var element = document.createElement('div');
     element.classList.add('project-thumb');
+    element.classList.add('gc-span-5');
+    // element.classList.add('bottom-border');
 
-    var thumb = `<a href="${project.link}">`;
+    var thumb = `<br><a href="${project.link}">`;
     thumb += '<div class="YUSS-grid-2">';
     
     
@@ -48,7 +46,7 @@ function buildProjectThumb(project) {
     thumb += '<div>';
     thumb += `<h2>${project.name}</h2>`;
     thumb += `<p>${project.type}</p>`;
-    thumb += `<br><p>${project.description}</p>`;
+    thumb += `<p>${project.description}</p>`;
     thumb += '</div>';
 
     // Col 3
@@ -59,10 +57,10 @@ function buildProjectThumb(project) {
     }
 
     thumb += "</div>";
-    thumb += '</a>';
+    thumb += '</a><br>';
 
     element.innerHTML = thumb;
-    document.getElementById(targetDiv).appendChild(element);
+    document.getElementById("project-thumbs-1").appendChild(element);
 }
 
 function buildProjectImg(project) {
@@ -72,6 +70,7 @@ function buildProjectImg(project) {
     
     var media = document.createElement('div');
     media.classList.add('project-thumb');
+    media.classList.add('gc-span-5');
     var caption = document.createElement('div');
     caption.classList.add('project-caption');
 
